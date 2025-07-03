@@ -45,6 +45,22 @@ body {
     width: auto;
 }
 
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #d32f2f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.logo-icon i {
+    color: white;
+    font-size: 1.5rem;
+}
+
 .nav-brand h1 {
     color: #000;
     font-size: 1.8rem;
