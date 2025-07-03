@@ -426,6 +426,55 @@ body {
     font-size: 1.2rem;
 }
 
+/* Visor de presentación integrado */
+.presentation-viewer {
+    margin-top: 3rem;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #d32f2f;
+}
+
+.presentation-viewer h3 {
+    text-align: center;
+    color: #d32f2f;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.presentation-info {
+    margin-top: 1rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.presentation-info i {
+    color: #d32f2f;
+    margin-right: 8px;
+}
+
 /* Footer */
 .footer {
     background-color: #000;
@@ -863,83 +912,480 @@ body {
     transform: translateX(0);
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    
-    .nav-toggle {
-        display: block;
-    }
-    
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 60px 0;
-    }
-    
-    .hero-content {
-        padding: 0 1rem;
-        margin-bottom: 2rem;
-    }
-    
-    .hero-content h2 {
-        font-size: 2.5rem;
-    }
-    
-    .products-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .features {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .cart-sidebar {
-        width: 100%;
-        right: -100%;
-    }
-    
-    .checkout-content {
-        width: 95%;
-        max-height: 90vh;
-    }
-    
-    .form-row {
-        flex-direction: column;
-    }
-    
-    .cart-count {
-        display: flex;
-    }
+/* Sección Quiénes Somos */
+.company-intro {
+    padding: 100px 0 80px;
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #000 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-@media (max-width: 480px) {
-    .hero-content h2 {
+.company-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(211,47,47,0.1)"/></svg>') repeat;
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-100px) rotate(360deg); }
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+}
+
+.intro-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.intro-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.intro-subtitle {
+    font-size: 1.3rem;
+    color: #d32f2f;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.company-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(211, 47, 47, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(211, 47, 47, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.value-card:hover::before {
+    left: 100%;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    border-color: #d32f2f;
+    box-shadow: 0 15px 35px rgba(211, 47, 47, 0.3);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #d32f2f, #ff5252);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.4);
+}
+
+.value-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.value-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+
+/* Historia y características adicionales */
+.company-story {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(211, 47, 47, 0.2);
+}
+
+.story-content h3 {
+    font-size: 2rem;
+    color: #d32f2f;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.story-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+}
+
+.company-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(211, 47, 47, 0.2);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    border-color: #d32f2f;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d32f2f, #ff5252);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.feature-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.feature-item h4 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.feature-item p {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Sección Nuestro Modelo de Venta */
+.sales-model {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+    margin-bottom: 0;
+}
+
+.sales-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sales-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sales-header h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.sales-subtitle {
+    font-size: 1.3rem;
+    color: #7f8c8d;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.sales-info {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.sales-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.sales-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.sales-description h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.sales-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #5d6d7e;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ecommerce-benefits {
+    margin-bottom: 50px;
+}
+
+.benefits-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.benefits-header h3 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.benefits-header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    font-weight: 300;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.benefit-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.benefit-item h4 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.benefit-item p {
+    font-size: 1rem;
+    color: #5d6d7e;
+    line-height: 1.5;
+}
+
+.presentation-highlight {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(39, 174, 96, 0.3);
+}
+
+.highlight-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.highlight-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.highlight-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.presentation-highlight h3 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.presentation-highlight p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.highlight-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.highlight-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.highlight-btn:not(.secondary) {
+    background: white;
+    color: #27ae60;
+}
+
+.highlight-btn:not(.secondary):hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.highlight-btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.highlight-btn.secondary:hover {
+    background: white;
+    color: #27ae60;
+    transform: translateY(-2px);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .sales-model {
+        padding: 50px 0;
+    }
+    
+    .sales-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .sales-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .sales-info {
+        padding: 30px 20px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .benefit-item {
+        padding: 25px 20px;
+    }
+    
+    .presentation-highlight {
+        padding: 30px 20px;
+    }
+    
+    .presentation-highlight h3 {
         font-size: 2rem;
     }
     
-    .section-title {
-        font-size: 2rem;
+    .presentation-highlight p {
+        font-size: 1.1rem;
     }
     
-    .container {
-        padding: 0 15px;
+    .highlight-actions {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .hero {
-        padding: 40px 0;
-    }
-    
-    .products,
-    .about {
-        padding: 60px 0;
+    .highlight-btn {
+        width: 100%;
+        max-width: 250px;
     }
 }
