@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kava Sports - Ropa Deportiva Masculina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="logo-kava-sports.png" alt="Kava Sports Logo" class="logo">
+                <h1>KAVA SPORTS</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#datos-economicos">Datos Económicos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Potencia tu Performance</h2>
+            <p>Descubre nuestra colección de ropa deportiva masculina diseñada para maximizar tu rendimiento</p>
+            <button class="cta-button" onclick="window.location.href='#productos'">Comprar Ahora</button>
+        </div>
+        <div class="hero-image">
+            <img src="rutina-de-entrenamiento-sin-pesas.png" alt="Hombre atlético entrenando">
+        </div>
+    </section>
+
+    <!-- Sección de productos -->
+    <section id="productos" class="products">
+        <div class="container">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="disenio_remera_uno.png" alt="Camiseta Kava Sports Negra">
+                    </div>
+                    <div class="product-info">
+                        <h3>Camiseta Kava Performance</h3>
+                        <p class="product-price">$21.000</p>
+                        <button class="add-to-cart" onclick="addToCart('Camiseta Kava Performance', 21000, 'disenio_remera_uno.png')">Agregar al Carrito</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="disenio_remera_dos.png" alt="Camiseta Kava Sports Roja">
+                    </div>
+                    <div class="product-info">
+                        <h3>Camiseta Kava Elite</h3>
+                        <p class="product-price">$21.000</p>
+                        <button class="add-to-cart" onclick="addToCart('Camiseta Kava Elite', 21000, 'disenio_remera_dos.png')">Agregar al Carrito</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="disenio_remera_tres.png" alt="Camiseta Kava Sports Blanca">
+                    </div>
+                    <div class="product-info">
+                        <h3>Camiseta Kava Pro</h3>
+                        <p class="product-price">$21.000</p>
+                        <button class="add-to-cart" onclick="addToCart('Camiseta Kava Pro', 21000, 'disenio_remera_tres.png')">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección sobre nosotros -->
+    <section id="sobre-nosotros" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Sobre Kava Sports</h2>
+                <p>Desde 2025, Kava Sports SRL se dedica a la confección y venta de remeras deportivas masculinas que combinan diseño, comodidad y tecnología.
+                   Apostamos por la producción local y el e-commerce como canal principal, ofreciendo productos de alta calidad a un precio accesible.
+                   Nuestro objetivo es acompañar y potenciar el rendimiento de quienes se entrenan día a día.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-tshirt"></i>
+                        <h3>Calidad Premium</h3>
+                        <p>Telas dry-fit de alto rendimiento, diseño técnico y producción local con control de calidad.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3>Envío Gratuito</h3>
+                        <p>Envíos a todo el país gratis.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-medal"></i>
+                        <h3>Garantía Total</h3>
+                        <p>Cambios y devoluciones sin cargo dentro de los 30 días.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección datos económicos -->
+    <section id="datos-economicos" class="economic-data">
+        <div class="container">
+            <div class="economic-content">
+                <h2>Datos Económicos</h2>
+                <p>Conoce más sobre el análisis económico y financiero de Kava Sports</p>
+                <div class="economic-info">
+                    <div class="economic-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Análisis de Mercado</h3>
+                        <p>Estudio completo del mercado de ropa deportiva masculina</p>
+                    </div>
+                    <div class="economic-card">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Proyecciones Financieras</h3>
+                        <p>Análisis de costos, precios y rentabilidad del negocio</p>
+                    </div>
+                    <div class="economic-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Segmentación de Clientes</h3>
+                        <p>Identificación del público objetivo y estrategias de venta</p>
+                    </div>
+                </div>
+                <div class="presentation-link">
+                    <a href="https://docs.google.com/presentation/d/1ewjSUdZGJ_VmVBxKs9viDr12oza_w-nweKqbPmvnsW8/edit?slide=id.g4cd51229f3_0_0#slide=id.g4cd51229f3_0_0" target="_blank" class="presentation-btn">
+                        <i class="fas fa-presentation"></i>
+                        Ver Presentación Completa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="logo-kava-sports.png" alt="Kava Sports Logo" class="footer-logo">
+                        <h3>KAVA SPORTS</h3>
+                    </div>
+                    <p>Potencia tu performance con la mejor ropa deportiva masculina</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i>Buenos Aires</p>
+                        <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+                        <p><i class="fas fa-envelope"></i> info@kavasports.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Horarios</h4>
+                    <div class="hours">
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        <p>Sábados: 10:00 - 19:00</p>
+                        <p>Domingos: Cerrado</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kava Sports UTN BA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrito lateral -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items">
+            <p class="empty-cart">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-section">
+                <h4>Total: <span class="cart-total">$0</span></h4>
+            </div>
+            <button class="checkout-btn" onclick="proceedToCheckout()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Modal de Checkout -->
+    <div class="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h3>Finalizar Compra</h3>
+                <button class="close-checkout" onclick="closeCheckout()">×</button>
+            </div>
+            <form class="checkout-form" onsubmit="event.preventDefault(); processOrder();">
+                <div class="form-group">
+                    <label for="name">Nombre completo *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Dirección *</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">Ciudad *</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postalCode">Código Postal *</label>
+                        <input type="text" id="postalCode" name="postalCode" required>
+                    </div>
+                </div>
+                <div class="checkout-summary">
+                    <h4>Resumen del pedido</h4>
+                    <div class="summary-total">
+                        <span>Total: <span class="cart-total">$0</span></span>
+                    </div>
+                </div>
+                <button type="submit" class="confirm-order-btn">Confirmar Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
