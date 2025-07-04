@@ -5,11 +5,73 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Transiciones suaves entre secciones */
+section {
+    transition: all 0.6s ease-in-out;
+}
+
+/* Transición suave para elementos */
+.navbar {
+    transition: all 0.3s ease-in-out;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+}
+
+/* Elementos de transición entre secciones */
+.section-transition {
+    height: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.transition-dark-to-light {
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(26, 26, 26, 0.8) 30%, 
+        rgba(248, 249, 250, 0.5) 70%, 
+        rgba(248, 249, 250, 1) 100%);
+}
+
+.transition-light-to-dark {
+    background: linear-gradient(to bottom, 
+        rgba(248, 249, 250, 1) 0%, 
+        rgba(26, 26, 26, 0.5) 30%, 
+        rgba(0, 0, 0, 0.8) 70%, 
+        rgba(0, 0, 0, 1) 100%);
+}
+
+.transition-gray-to-dark {
+    background: linear-gradient(to bottom, 
+        rgba(233, 236, 239, 1) 0%, 
+        rgba(128, 128, 128, 0.7) 50%, 
+        rgba(0, 0, 0, 1) 100%);
+}
+
+.transition-dark-to-gray {
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(64, 64, 64, 0.7) 50%, 
+        rgba(248, 249, 250, 1) 100%);
+}
+
+.transition-light-gray-to-light-gray {
+    height: 150px;
+    background: linear-gradient(to bottom, 
+        rgba(248, 249, 250, 1) 0%, 
+        rgba(242, 244, 247, 1) 20%, 
+        rgba(238, 241, 245, 1) 40%, 
+        rgba(235, 238, 242, 1) 60%, 
+        rgba(233, 236, 239, 1) 80%, 
+        rgba(248, 249, 250, 1) 100%);
 }
 
 .container {
@@ -176,10 +238,9 @@ body {
 
 /* Sección de productos */
 .products {
-    padding: 80px 0;
+    padding: 80px 0 60px 0;
     background-color: #f8f9fa;
 }
-
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -332,7 +393,7 @@ body {
 
 /* Sección datos económicos */
 .economic-data {
-    padding: 80px 0;
+    padding: 60px 0 80px 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
