@@ -1726,35 +1726,43 @@ body {
 /* Guía de Talles */
 .size-guide-section {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 0;
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.8), rgba(233, 236, 239, 0.8));
+    border-radius: 15px;
+    margin-top: 1rem;
 }
 
 .size-guide-main-btn {
     background: linear-gradient(135deg, #d32f2f, #ff5252);
     color: white;
     border: none;
-    padding: 12px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 25px;
+    padding: 14px 32px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+    letter-spacing: 1.2px;
+    box-shadow: 0 5px 18px rgba(211, 47, 47, 0.35);
+    font-family: inherit;
+    text-decoration: none;
+    border: 2px solid #d32f2f;
 }
 
 .size-guide-main-btn:hover {
     background: linear-gradient(135deg, #b71c1c, #d32f2f);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.45);
+    border-color: #b71c1c;
 }
 
 .size-guide-main-btn i {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
 }
 
 /* Modal de Guía de Talles */
@@ -1983,9 +1991,19 @@ body {
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
+    .size-guide-section {
+        padding: 1.2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
     .size-guide-main-btn {
-        font-size: 0.9rem;
-        padding: 10px 25px;
+        font-size: 0.95rem;
+        padding: 12px 28px;
+        letter-spacing: 1px;
+    }
+    
+    .size-guide-main-btn i {
+        font-size: 1.1rem;
     }
     
     .size-guide-content {
