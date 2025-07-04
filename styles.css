@@ -309,6 +309,38 @@ body {
     margin-bottom: 1rem;
 }
 
+.size-selector {
+    margin-bottom: 1rem;
+}
+
+.size-selector label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.size-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.size-select:focus {
+    outline: none;
+    border-color: #d32f2f;
+}
+
+.size-select:hover {
+    border-color: #bbb;
+}
+
 .add-to-cart {
     width: 100%;
     background-color: #000;

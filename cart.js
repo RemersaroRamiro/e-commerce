@@ -38,6 +38,25 @@ function removeFromCart(productName) {
     showNotification(`${productName} eliminado del carrito`);
 }
 
+function addToCartWithSize(name, price, image, sizeSelectId) {
+    const sizeSelect = document.getElementById(sizeSelectId);
+    const selectedSize = sizeSelect.value;
+    
+    if (!selectedSize) {
+        alert('Por favor selecciona un talle antes de agregar al carrito');
+        return;
+    }
+    
+    // Modificar el nombre del producto para incluir el talle
+    const productNameWithSize = `${name} - Talle ${selectedSize}`;
+    
+    // Usar la función existente addToCart con el nombre modificado
+    addToCart(productNameWithSize, price, image);
+    
+    // Resetear la selección de talle
+    sizeSelect.value = '';
+}
+
 // Función para cambiar cantidad de productos
 function changeQuantity(productName, newQuantity) {
     const item = cart.find(item => item.name === productName);
