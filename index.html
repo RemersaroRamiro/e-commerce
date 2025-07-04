@@ -13,9 +13,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <div class="logo-icon">
-                    <i class="fas fa-dumbbell"></i>
-                </div>
+                <img src="logo-kava-sports.png" alt="Kava Sports" class="logo">
                 <h1>KAVA SPORTS</h1>
             </div>
             <ul class="nav-menu">
@@ -44,38 +42,44 @@
                     <h1>Quiénes Somos</h1>
                     <p class="intro-subtitle">Innovación, calidad y pasión por el deporte</p>
                 </div>
-                
-                <div class="company-values">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-bullseye"></i>
-                        </div>
-                        <h3>Nuestra Misión</h3>
-                        <p>Desarrollar y comercializar ropa deportiva masculina de alta calidad que combine diseño, tecnología y comodidad, apoyando a los deportistas en el logro de sus objetivos a través de productos innovadores y accesibles.</p>
-                    </div>
-                    
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3>Nuestra Visión</h3>
-                        <p>Ser la marca líder en ropa deportiva masculina en Argentina, reconocida por nuestra calidad, innovación y compromiso con la producción local, expandiendo nuestra presencia a nivel regional para 2030.</p>
-                    </div>
-                    
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h3>Nuestros Valores</h3>
-                        <p>Calidad premium, innovación constante, producción local responsable, compromiso con nuestros clientes y pasión por potenciar el rendimiento deportivo de cada persona.</p>
-                    </div>
-                </div>
-                
+
                 <!-- Información adicional de la empresa -->
                 <div class="company-story">
                     <div class="story-content">
                         <h3>Nuestra Historia</h3>
                         <p>Desde 2025, Kava Sports SRL se dedica a la confección y venta de remeras deportivas masculinas que combinan diseño, comodidad y tecnología. Apostamos por la producción local y el e-commerce como canal principal, ofreciendo productos de alta calidad a un precio accesible. Nuestro objetivo es acompañar y potenciar el rendimiento de quienes se entrenan día a día.</p>
+                    </div>
+                </div>
+
+                <div class="company-values">
+                    <div class="value-card clickable-card" onclick="openModal('modal-mision')">
+                        <div class="value-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Nuestra Misión</h3>
+                        <div class="click-hint">
+                            <i class="fas fa-info-circle"></i> Haz clic para más detalles
+                        </div>
+                    </div>
+                    
+                    <div class="value-card clickable-card" onclick="openModal('modal-vision')">
+                        <div class="value-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Nuestra Visión</h3>
+                        <div class="click-hint">
+                            <i class="fas fa-info-circle"></i> Haz clic para más detalles
+                        </div>
+                    </div>
+                    
+                    <div class="value-card clickable-card" onclick="openModal('modal-valores')">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Nuestros Valores</h3>
+                        <div class="click-hint">
+                            <i class="fas fa-info-circle"></i> Haz clic para más detalles
+                        </div>
                     </div>
                 </div>
                 
@@ -321,8 +325,6 @@
                     <h4>Horarios</h4>
                     <div class="hours">
                         <p>Lunes a Viernes: 9:00 - 18:00</p>
-                        <p>Sábados: 10:00 - 19:00</p>
-                        <p>Domingos: Cerrado</p>
                     </div>
                 </div>
             </div>
@@ -395,6 +397,130 @@
         </div>
     </div>
 
-    <script src="cart.js"></script>
+<!-- Modales para Misión, Visión y Valores -->
+<div id="modal-mision" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-mision')">&times;</span>
+        <div class="modal-header">
+            <div class="modal-icon">
+                <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Nuestra Misión</h3>
+        </div>
+        <div class="modal-body">
+        <div class="mission-details">
+                <h4>¿Cómo lo hacemos?</h4>
+                <ul>
+                    <li><strong>Innovación:</strong> Utilizando telas dry-fit de última tecnología</li>
+                    <li><strong>Calidad:</strong> Controles estrictos en cada etapa de producción</li>
+                    <li><strong>Accesibilidad:</strong> Precios competitivos sin comprometer la calidad</li>
+                    <li><strong>Apoyo:</strong> Acompañando a cada deportista en su camino al éxito</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-vision" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-vision')">&times;</span>
+        <div class="modal-header">
+            <div class="modal-icon">
+                <i class="fas fa-eye"></i>
+            </div>
+            <h3>Nuestra Visión</h3>
+        </div>
+        <div class="modal-body">
+        <div class="vision-details">
+                <h4>Objetivos estratégicos:</h4>
+                <ul>
+                    <li><strong>Liderazgo nacional:</strong> Posicionarnos como la marca #1 en Argentina</li>
+                    <li><strong>Reconocimiento:</strong> Ser referentes en calidad e innovación</li>
+                    <li><strong>Producción local:</strong> Fortalecer la industria textil argentina</li>
+                    <li><strong>Expansión regional:</strong> Llegar a mercados de América Latina</li>
+                    <li><strong>Plazo:</strong> Lograr estos objetivos para el año 2030</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-valores" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-valores')">&times;</span>
+        <div class="modal-header">
+            <div class="modal-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3>Nuestros Valores</h3>
+        </div>
+        <div class="modal-body">
+        <div class="values-details">
+                <h4>Valores fundamentales:</h4>
+                <div class="value-items">
+                    <div class="value-item">
+                        <i class="fas fa-star"></i>
+                        <strong>Calidad Premium:</strong> Sin compromisos en materiales y confección
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <strong>Innovación Constante:</strong> Siempre buscando nuevas tecnologías
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <strong>Producción Local:</strong> Apoyo a la industria argentina
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-handshake"></i>
+                        <strong>Compromiso con Clientes:</strong> Su satisfacción es nuestra prioridad
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-fire"></i>
+                        <strong>Pasión Deportiva:</strong> Entendemos las necesidades del atleta
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Funciones para manejar los modales
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.onclick = function(event) {
+        const modals = ['modal-mision', 'modal-vision', 'modal-valores'];
+        modals.forEach(modalId => {
+            const modal = document.getElementById(modalId);
+            if (event.target === modal) {
+                closeModal(modalId);
+            }
+        });
+    }
+
+    // Cerrar modal con tecla Escape
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            const modals = ['modal-mision', 'modal-vision', 'modal-valores'];
+            modals.forEach(modalId => {
+                const modal = document.getElementById(modalId);
+                if (modal.style.display === 'block') {
+                    closeModal(modalId);
+                }
+            });
+        }
+    });
+</script>
+
+<script src="cart.js"></script>
 </body>
 </html>
