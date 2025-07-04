@@ -220,6 +220,11 @@
     <section id="productos" class="products">
         <div class="container">
             <h2 class="section-title">Productos Destacados</h2>
+            <div class="size-guide-section">
+                <button type="button" class="size-guide-main-btn" onclick="openSizeGuide()">
+                    <i class="fas fa-ruler"></i> Guía de Talles
+                </button>
+            </div>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">
@@ -538,6 +543,146 @@
     </div>
 </div>
 
+<!-- Modal Guía de Talles -->
+<div id="size-guide-modal" class="modal">
+    <div class="modal-content size-guide-content">
+        <div class="modal-header">
+            <div class="modal-icon">
+                <i class="fas fa-ruler"></i>
+            </div>
+            <h3>Guía de Talles</h3>
+            <span class="close" onclick="closeSizeGuide()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="size-guide-intro">
+                <p><strong>¿Cómo elegir tu talle perfecto?</strong></p>
+                <p>Para encontrar tu talle ideal, te recomendamos tomar las siguientes medidas con una cinta métrica flexible:</p>
+            </div>
+
+            <div class="measurement-instructions">
+                <div class="instruction-item">
+                    <div class="instruction-icon">
+                        <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                    <div class="instruction-text">
+                        <h4>Contorno de Pecho</h4>
+                        <p>Mide alrededor de la parte más amplia del pecho, manteniendo la cinta horizontal.</p>
+                    </div>
+                </div>
+                <div class="instruction-item">
+                    <div class="instruction-icon">
+                        <i class="fas fa-arrows-alt-v"></i>
+                    </div>
+                    <div class="instruction-text">
+                        <h4>Largo de Torso</h4>
+                        <p>Desde el punto más alto del hombro hasta la cintura.</p>
+                    </div>
+                </div>
+                <div class="instruction-item">
+                    <div class="instruction-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="instruction-text">
+                        <h4>Ancho de Hombros</h4>
+                        <p>De un extremo del hombro al otro, pasando por la espalda.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="size-table-container">
+                <h4>Tabla de Medidas (en centímetros)</h4>
+                <div class="table-responsive">
+                    <table class="size-table">
+                        <thead>
+                            <tr>
+                                <th>Talle</th>
+                                <th>Contorno Pecho</th>
+                                <th>Largo</th>
+                                <th>Ancho Hombros</th>
+                                <th>Peso Aprox. (kg)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>XS</strong></td>
+                                <td>88-92</td>
+                                <td>66</td>
+                                <td>42</td>
+                                <td>55-65</td>
+                            </tr>
+                            <tr>
+                                <td><strong>S</strong></td>
+                                <td>92-96</td>
+                                <td>68</td>
+                                <td>44</td>
+                                <td>65-70</td>
+                            </tr>
+                            <tr>
+                                <td><strong>M</strong></td>
+                                <td>96-102</td>
+                                <td>70</td>
+                                <td>46</td>
+                                <td>70-80</td>
+                            </tr>
+                            <tr>
+                                <td><strong>L</strong></td>
+                                <td>102-108</td>
+                                <td>72</td>
+                                <td>48</td>
+                                <td>80-90</td>
+                            </tr>
+                            <tr>
+                                <td><strong>XL</strong></td>
+                                <td>108-114</td>
+                                <td>74</td>
+                                <td>50</td>
+                                <td>90-100</td>
+                            </tr>
+                            <tr>
+                                <td><strong>XXL</strong></td>
+                                <td>114-120</td>
+                                <td>76</td>
+                                <td>52</td>
+                                <td>100-110</td>
+                            </tr>
+                            <tr>
+                                <td><strong>XXXL</strong></td>
+                                <td>120-126</td>
+                                <td>78</td>
+                                <td>54</td>
+                                <td>110-120</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="size-tips">
+                <h4>Consejos Importantes:</h4>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Si estás entre dos talles, te recomendamos elegir el talle mayor para mayor comodidad.</li>
+                    <li><i class="fas fa-check-circle"></i> Nuestras remeras tienen un corte atlético pero cómodo, ideal para entrenar.</li>
+                    <li><i class="fas fa-check-circle"></i> El tejido técnico tiene ligera elasticidad que se adapta al movimiento.</li>
+                    <li><i class="fas fa-check-circle"></i> Si tienes dudas, contáctanos por WhatsApp y te ayudamos a elegir.</li>
+                </ul>
+            </div>
+
+            <div class="contact-help">
+                <div class="help-card">
+                    <i class="fas fa-question-circle"></i>
+                    <div>
+                        <h5>¿Necesitas más ayuda?</h5>
+                        <p>Consulta guías adicionales y consejos para elegir el talle perfecto</p>
+                        <a href="https://www.digitalsport.com.ar/blast/pages/mi-talle-indumentaria-10/?srsltid=AfmBOoo8adwA0xU43a8NiKhgMXyRPbP0ywgYiJB4nO1qht8E1e8QfhKc" class="help-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Consultar Guía Externa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     // Funciones para manejar los modales
     function openModal(modalId) {
@@ -564,13 +709,32 @@
     // Cerrar modal con tecla Escape
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
-            const modals = ['modal-mision', 'modal-vision', 'modal-valores'];
+            const modals = ['modal-mision', 'modal-vision', 'modal-valores', 'size-guide-modal'];
             modals.forEach(modalId => {
                 const modal = document.getElementById(modalId);
                 if (modal.style.display === 'block') {
                     closeModal(modalId);
                 }
             });
+        }
+    });
+
+    // Funciones para la guía de talles
+    function openSizeGuide() {
+        document.getElementById('size-guide-modal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeSizeGuide() {
+        document.getElementById('size-guide-modal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Cerrar modal de guía de talles al hacer clic fuera
+    window.addEventListener('click', function(event) {
+        const sizeGuideModal = document.getElementById('size-guide-modal');
+        if (event.target === sizeGuideModal) {
+            closeSizeGuide();
         }
     });
 </script>

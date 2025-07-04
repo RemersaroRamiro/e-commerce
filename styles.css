@@ -1722,3 +1722,327 @@ body {
         justify-content: center;
     }
 }
+
+/* Guía de Talles */
+.size-guide-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.size-guide-main-btn {
+    background: linear-gradient(135deg, #d32f2f, #ff5252);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+}
+
+.size-guide-main-btn:hover {
+    background: linear-gradient(135deg, #b71c1c, #d32f2f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+}
+
+.size-guide-main-btn i {
+    font-size: 1.1rem;
+}
+
+/* Modal de Guía de Talles */
+.size-guide-content {
+    max-width: 900px;
+    max-height: 90vh;
+}
+
+.size-guide-intro {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 4px solid #d32f2f;
+}
+
+.size-guide-intro p:first-child {
+    color: #d32f2f;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.measurement-instructions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.instruction-item:hover {
+    background: #ffebee;
+    transform: translateY(-2px);
+}
+
+.instruction-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #d32f2f, #ff5252);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.instruction-icon i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.instruction-text h4 {
+    color: #d32f2f;
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.instruction-text p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.size-table-container {
+    margin-bottom: 30px;
+}
+
+.size-table-container h4 {
+    color: #d32f2f;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.size-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.size-table thead {
+    background: linear-gradient(135deg, #d32f2f, #ff5252);
+}
+
+.size-table th {
+    color: white;
+    padding: 15px 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.size-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.size-table tbody tr:hover {
+    background: #ffebee;
+}
+
+.size-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.size-table td:first-child {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #d32f2f;
+}
+
+.size-tips {
+    background: linear-gradient(135deg, #e8f5e8, #f1f8e9);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 4px solid #4caf50;
+}
+
+.size-tips h4 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.size-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.size-tips li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.size-tips li:last-child {
+    margin-bottom: 0;
+}
+
+.size-tips li i {
+    color: #4caf50;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.contact-help {
+    margin-top: 20px;
+}
+
+.help-card {
+    background: linear-gradient(135deg, #1976d2, #1565c0);
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.help-card > i {
+    font-size: 3rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.help-card h5 {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.help-card p {
+    margin: 0 0 15px 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.help-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.help-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .size-guide-main-btn {
+        font-size: 0.9rem;
+        padding: 10px 25px;
+    }
+    
+    .size-guide-content {
+        width: 95%;
+        margin: 5% auto;
+        max-height: 90vh;
+    }
+    
+    .modal-header {
+        padding: 15px 20px;
+    }
+    
+    .modal-body {
+        padding: 20px 15px;
+    }
+    
+    .measurement-instructions {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .instruction-item {
+        padding: 15px;
+    }
+    
+    .size-table th,
+    .size-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+    }
+    
+    .help-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .help-card > i {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .size-table {
+        font-size: 0.8rem;
+    }
+    
+    .size-table th,
+    .size-table td {
+        padding: 6px 4px;
+    }
+    
+    .size-tips {
+        padding: 20px 15px;
+    }
+    
+    .contact-help .help-card {
+        padding: 20px 15px;
+    }
+}
